@@ -55,9 +55,6 @@ class _CallScreenState extends State<CallScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Call Screen'),
-      ),
       body: Column(
         children: [
           Expanded(
@@ -69,12 +66,12 @@ class _CallScreenState extends State<CallScreen> {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: GridView.count(
               crossAxisCount: 3,
               mainAxisSpacing: 6,
               crossAxisSpacing: 8,
-              childAspectRatio: 1.25,
+              childAspectRatio: 1.5,
               children: [
                 ...List.generate(9, (index) {
                   final digit = (index + 1).toString();
@@ -145,8 +142,8 @@ class _CallScreenState extends State<CallScreen> {
             ),
           ),
           SizedBox(
-            width: 96,
-            height: 96,
+            width: 80,
+            height: 80,
             child: ElevatedButton(
               onPressed: makeCall,
               style: ElevatedButton.styleFrom(
@@ -155,7 +152,7 @@ class _CallScreenState extends State<CallScreen> {
               ),
               child: const Icon(
                 Icons.call,
-                size: 48,
+                size: 36,
                 color: Colors.white,
               ),
             ),
